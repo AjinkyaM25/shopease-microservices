@@ -1,8 +1,9 @@
 package com.shopease.userservice.controller;
 
-import java.awt.desktop.UserSessionEvent;
+
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -22,12 +23,13 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/api/users")
 
-public class userController {
+public class UserController {
 
+	@Autowired
 	private UserService userService;
 
 	// Register New User
-	// POST http://localhost:8081/api/users/register
+	// POST http://localhost:8081/api/users/register //
 
 	@PostMapping("/register")
 	public ResponseEntity<UserResponseDTO> registerUser(@Valid @RequestBody RegisterRequestDTO request) {
@@ -39,6 +41,7 @@ public class userController {
 
 	// Get User by ID
 	// Get http://localhost:8081/api/users
+
 	@GetMapping("/{id}")
 	public ResponseEntity<UserResponseDTO> getUserById(@PathVariable Long id) {
 
@@ -49,6 +52,8 @@ public class userController {
 
 	// Get All USers
 	// Get http://localhost:8081/api/users
+	
+	
 	@GetMapping
 	public ResponseEntity<List<UserResponseDTO>> getAllUsers() {
 

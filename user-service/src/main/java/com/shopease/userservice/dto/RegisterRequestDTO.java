@@ -27,9 +27,9 @@ public class RegisterRequestDTO {
 	@NotBlank(message = "Password is required")
 	@Size(min =8 , message ="Password should be minimum 6 character ")
 	@Pattern (
-			regexp = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=!])(?=\\\\S+$).{8,}$\"",
+			regexp = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=!])(?=\\S+$).{8,}$",
 			message = "Password must contain at least" + 
-			"one upper case letter" + 
+			"one upper case letter , " + 
 					"one Number "+
 			"one special case characte") 
 	private String password;

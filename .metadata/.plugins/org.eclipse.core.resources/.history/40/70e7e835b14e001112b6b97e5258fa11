@@ -1,0 +1,5 @@
+package com.shopease.productservice.exception;
+
+public class ProductNotFoundException {
+
+}

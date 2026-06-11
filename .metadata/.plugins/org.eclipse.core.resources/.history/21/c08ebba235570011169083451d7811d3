@@ -1,0 +1,5 @@
+package com.shopease.orderservice.entity;
+
+public class Order {
+
+}

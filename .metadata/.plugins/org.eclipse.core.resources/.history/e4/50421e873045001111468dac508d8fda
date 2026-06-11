@@ -1,0 +1,5 @@
+package com.shopease.userservice.entity;
+
+public enum Role {
+
+}
